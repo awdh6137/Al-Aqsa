@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة الأقصى 2026 | إبداع غيداء بشير</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #f1c40f;
+            --dark-blue: #0f172a;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+            font-family: 'Cairo', sans-serif; scroll-behavior: smooth;
+        }
+
+        body {
+            
+            background-color: #05070a;
+            color: white;
+            line-height: 1.6;
+        }
+
+        /* --- خلفية متحركة هادئة --- */
+        body::before {
+            content: "";
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #1e293b 0%, #05070a 100%);
+            z-index: -1;
+        }
+
+        /* --- Header --- */
+        header {
+            padding: 20px 8%;
+            display: flex; justify-content: space-between; align-items: center;
+            backdrop-filter: blur(15px); background: rgba(5, 7, 10, 0.8);
+            position: fixed; width: 100%; top: 0; z-index: 1000;
+            border-bottom: 1px solid rgba(241, 196, 15, 0.1);
+        }
+
+        .logo { font-size: 1.8rem; font-weight: 900; color: var(--gold); text-decoration: none; }
+        
+        nav a { color: white; text-decoration: none; margin-right: 20px; font-size: 0.9rem; transition: 0.3s; }
+        nav a:hover { color: var(--gold); }
+
+        /* --- Hero --- */
+        .hero {
+            height: 90vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; padding-top: 80px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            background: linear-gradient(to bottom, #fff 30%, var(--gold));
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        /* --- قسم من نحن (About) --- */
+        .about {
+            padding: 80px 10%;
+            background: var(--glass-bg);
+            margin: 50px 0;
+            border-radius: 0 100px 0 100px;
+            border: 1px solid rgba(241, 196, 15, 0.1);
+        }
+
+        .about h2 { color: var(--gold); margin-bottom: 20px; font-size: 2.5rem; }
+        .about p { font-size: 1.2rem; max-width: 900px; color: #cbd5e1; }
+
+        /* --- معرض الصور (Gallery) --- */
+        .gallery {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .gallery-title { font-size: 2.5rem; color: var(--gold); margin-bottom: 40px; }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            height: 300px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid rgba(241, 196, 15, 0.2);
+            transition: var(--transition);
+        }
+
+        .gallery-item img {
+            width: 100%; height: 100%; object-fit: cover; transition: 0.8s;
+        }
+
+        .gallery-item:hover img { transform: scale(1.1); filter: brightness(0.5); }
+
+        .overlay {
+            position: absolute; bottom: -100%; left: 0; width: 100%;
+            padding: 20px; background: linear-gradient(transparent, black);
+            transition: 0.5s; text-align: right;
+        }
+
+        .gallery-item:hover .overlay { bottom: 0; }
+
+        /* --- Footer --- */
+        footer {
+            padding: 60px 8% 30px;
+            background: rgba(0,0,0,0.8);
+            text-align: center;
+            border-top: 2px solid var(--gold);
+        }
+
+        .designer {
+            margin-top: 40px;
+            font-size: 1.2rem;
+            color: #fff;
+            padding: 15px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .designer span { color: var(--gold); font-weight: 900; text-decoration: underline; }
+
+        /* Animations */
+        [data-aos] { opacity: 0; transform: translateY(30px); transition: 1s; }
+        .visible { opacity: 1; transform: translateY(0); }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">مكتبة الأقصى</a>
+        <nav>
+            <a href="#about">من نحن</a>
+            <a href="#gallery">المعرض</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>عالم من التميز</h1>
+            <p>مكتبتكم المفضلة في يريم، حيث تلتقي التكنولوجيا بالقرطاسية.</p>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>عن مكتبة الأقصى</h2>
+        <p>من قلب مدينة يريم، انطلقنا لنكون المركز المتكامل الذي يلبي طموحاتكم. نحن لنسنا مجرد مكتبة، بل نحن شركاؤكم في النجاح الدراسي، وخبراؤكم في حلول الأنظمة الإلكترونية ومفاتيح السيارات الحديثة. نجمع بين عراقة الخدمات وتطور الأدوات لنوفر لكم تجربة فريدة لا تُنسى.</p>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2 class="gallery-title">معرض خدماتنا</h2>
+        <div class="grid-container">
+            <div class="gallery-item">
+                <img src="4.jpg" alt="قرطاسية">
+                <div class="overlay"><h4>القرطاسية الفاخرة</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="11.jpg" alt="مفاتيح">
+                <div class="overlay"><h4>نسخ المفاتيح الذكية</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="3.jpg" alt="إلكترونيات">
+                <div class="overlay"><h4>ركن الإلكترونيات</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="1.jpg" alt="تصوير">
+                <div class="overlay"><h4>مركز التصوير والطباعة</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <h3 style="color:var(--gold)">اتصل بنا الآن</h3>
+        <p>يريم - الشارع العام - خلف مستشفى يحصب</p>
+        <p>هاتف: 04500484 | جوال: 774790215</p>
+        
+        <div class="designer">
+            &copy; 2026 جميع الحقوق محفوظة لمكتبة الأقصى <br>
+            تم التصميم بكل فخامة بواسطة: <span>غيداء بشير</span>
+        </div>
+    </footer>
+
+    <script>
+        // حركة بسيطة عند التمرير
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => observer.observe(section));
+    </script>
+</body>
+</html>
